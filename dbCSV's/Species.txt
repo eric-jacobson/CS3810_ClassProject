@@ -1,0 +1,14 @@
+200,Normal,302
+201,Fire,301
+202,Water,300
+203,Electric,304
+204,Grass,306
+205,Ice,305
+206,Fighting,302
+207,Poison,300
+208,ground,306
+209,flying,303
+210,psychic,301
+211,Bug,302
+212,rock,301
+213,ghost,305
