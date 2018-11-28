@@ -18,6 +18,17 @@ CREATE TABLE Badges (
     CONSTRAINT Badges_pk PRIMARY KEY (ID)
 );
 
+INSERT INTO Badges(ID, name, gym, Trainer_ID)
+VALUES 
+    (101,"Boulder","Pewter",1001),
+    (102,"Cascade","Cerulean",1003),
+    (103,"Thunder","Vermilion",1034),
+    (104,"Rainbow","Celadon",1012),
+    (105,"Soul","Fuchsia",1037),
+    (106,"Marsh","Saffron",1049),
+    (107,"Volcano","Cinnabar",1011),
+    (108,"Earth","Viridian",1020);
+
 -- Table: Generation
 CREATE TABLE Generation (
     ID int NOT NULL,
