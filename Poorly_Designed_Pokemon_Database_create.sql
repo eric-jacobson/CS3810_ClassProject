@@ -9,34 +9,34 @@ CREATE TABLE Abilities (
     CONSTRAINT Abilities_pk PRIMARY KEY (Ability_ID)
 );
 INSERT INTO Abilities(Name, Ability_ID ) VALUES
-(stench,89),
-(drizzle,86),
-(speed-boost,61),
-(battle-armor,58),
-(sturdy,75),
-(damp,46),
-(limber,53),
-(sand-veil,27),
-(static,25),
-(volt-absorb,7),
-(water-absorb,60),
-(oblivious,79),
-(cloud-nine,54),
-(compound-eyes,12),
-(insomnia,96),
-(color-change,73),
-(immunity,100),
-(flash-fire,37),
-(shield-dust,10),
-(own-tempo,79),
-(suction-cups,69),
-(intimidate,23),
-(shadow-tag,3),
-(rough-skin,18),
-(wonder-guard,20),
-(levitate,94),
-(effect-spore,45),
-(synchronize,63);
+("stench",89),
+("drizzle",86),
+("speed-boost",61),
+("battle-armor",58),
+("sturdy",75),
+("damp",46),
+("limber",53),
+("sand-veil",27),
+("static",25),
+("volt-absorb",7),
+("water-absorb",60),
+("oblivious",79),
+("cloud-nine",54),
+("compound-eyes",12),
+("insomnia",96),
+("color-change",73),
+("immunity",100),
+("flash-fire",37),
+("shield-dust",10),
+("own-tempo",79),
+("suction-cups",69),
+("intimidate",23),
+("shadow-tag",3),
+("rough-skin",18),
+("wonder-guard",20),
+("levitate",94),
+("effect-spore",45),
+("synchronize",63);
 
 -- Table: Badges
 CREATE TABLE Badges (
@@ -340,15 +340,15 @@ CREATE TABLE Region (
     CONSTRAINT Region_pk PRIMARY KEY (ID)
 );
 INSERT  INTO Region( ID, Name ) VALUES
-(300,Hoenn),
-(301,Johto),
-(302,Kalos),
-(303,Kanto),
-(304,Sinnoh),
-(305,Unova),
-(306,Alola),
-(307,Almia),
-(308,Oblivia);
+(300,"Hoenn"),
+(301,"Johto"),
+(302,"Kalos"),
+(303,"Kanto"),
+(304,"Sinnoh"),
+(305,"Unova"),
+(306,"Alola"),
+(307,"Almia"),
+(308,"Oblivia");
 
 -- Table: Trainer
 CREATE TABLE Trainer (
