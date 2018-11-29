@@ -1,3 +1,33 @@
+-- Created by Vertabelo (http://vertabelo.com)
+-- Last modification date: 2018-11-27 22:25:22.547
+
+-- Table: Generation
+CREATE TABLE Generation (
+    ID varchar(20) NOT NULL,
+    Region_ID int NOT NULL,
+    CONSTRAINT Generation_pk PRIMARY KEY (ID)
+);
+INSERT INTO Generation(ID,Region_ID)
+VALUES
+("G1",303),
+("G2",301),
+("G3",300),
+("G4",304),
+("G5",305),
+("G6",302),
+("G7",306);
+
+-- Table: Pokemon
+CREATE TABLE Pokemon (
+    ID int NOT NULL,
+    Name varchar(20) NOT NULL,
+    Height int NOT NULL,
+    Weight int NOT NULL,
+    Generation_ID int NOT NULL,
+    CONSTRAINT ID PRIMARY KEY (ID)
+);
+INSERT INTO Pokemon(ID,Name,Height,Weight,Generation_ID)
+VALUES
 (1,"bulbasaur",7,69,300),
 (2,"ivysaur",10,130,300),
 (3,"venusaur",20,1000,300),
@@ -97,4 +127,37 @@
 (97,"hypno",16,756,305),
 (98,"krabby",4,65,305),
 (99,"kingler",13,600,305),
-(100,"voltorb",5,104,305),
+(100,"voltorb",5,104,305);
+
+
+-- foreign keys
+-- Reference: Badges_Trainer (table: Badges)
+--ALTER TABLE Badges ADD CONSTRAINT Badges_Trainer FOREIGN KEY Badges_Trainer (Trainer_ID)
+--    REFERENCES Trainer (ID);
+
+-- Reference: Generations_Region (table: Generation)
+ALTER TABLE Generation ADD CONSTRAINT Generations_Region FOREIGN KEY Generations_Region (Region_ID)
+    REFERENCES Region (ID);
+
+-- Reference: Pokemon_Abilities_Abilities (table: Pokemon_Abilities)
+--ALTER TABLE Pokemon_Abilities ADD CONSTRAINT Pokemon_Abilities_Abilities FOREIGN KEY Pokemon_Abilities_Abilities (Ability_ID)
+ --   REFERENCES Abilities (Ability_ID);
+
+-- Reference: Pokemon_Abilities_Pokemon (table: Pokemon_Abilities)
+--ALTER TABLE Pokemon_Abilities ADD CONSTRAINT Pokemon_Abilities_Pokemon FOREIGN KEY Pokemon_Abilities_Pokemon (Pokemon_ID)
+ --   REFERENCES Pokemon (ID);
+
+-- Reference: Pokemon_Generation (table: Pokemon)
+ALTER TABLE Pokemon ADD CONSTRAINT Pokemon_Generation FOREIGN KEY Pokemon_Generation (Generation_ID)
+    REFERENCES Generation (ID);
+
+-- Reference: Pokemon_Owned_Pokemon (table: Pokemon_Owned)
+--ALTER TABLE Pokemon_Owned ADD CONSTRAINT Pokemon_Owned_Pokemon FOREIGN KEY Pokemon_Owned_Pokemon (Pokemon_ID)
+ --   REFERENCES Pokemon (ID);
+
+-- Reference: Pokemon_Owned_Trainer (table: Pokemon_Owned)
+--ALTER TABLE Pokemon_Owned ADD CONSTRAINT Pokemon_Owned_Trainer FOREIGN KEY Pokemon_Owned_Trainer (Trainer_ID)
+--    REFERENCES Trainer (ID);
+
+-- End of file.
+
